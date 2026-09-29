@@ -1,4 +1,45 @@
-/* ===== HACKERA FINTECH UPDATE: append below your existing CSS ===== */
+/* ===== GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* ===== BASE VARIABLES & RESET ===== */
+:root {
+  --ink: #0b0b0c;
+  --pearl: #f5f5f7;
+  --paper: #ffffff;
+  --muted: #6e6e73;
+  --line-soft: #e5e5ea;
+  --orange: #ff5a1f;
+  --orange-deep: #d9430c;
+  --orange-soft: rgba(255, 90, 31, 0.1);
+  --gradient: linear-gradient(135deg, #ff5a1f 0%, #e03e00 100%);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  background: none;
+}
+
+/* ===== HACKERA FINTECH STYLES ===== */
 .hk-wrap { max-width: 72rem; margin: 0 auto; padding: 0 24px; }
 .hk-dark { position: relative; overflow: hidden; background: var(--ink); color: #fff; }
 .hk-hero { padding: 88px 0 72px; }
@@ -28,7 +69,7 @@
 .hk-lead { margin: 14px 0 0; max-width: 38rem; color: var(--muted); line-height: 1.65; }
 .hk-dark .hk-lead { color: rgba(255,255,255,0.65); }
 .hk-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 44px; }
-.hk-card { background: var(--paper); border: 1px solid var(--line-soft); border-radius: 20px; padding: 28px; }
+.hk-card { background: var(--paper); border: 1px solid var(--line-soft); border-radius: 20px; padding: 28px; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
 .hk-card h3 { margin: 16px 0 8px; font-size: 1.05rem; font-weight: 600; }
 .hk-card p { margin: 0; font-size: 0.92rem; line-height: 1.6; color: var(--muted); }
 .hk-icon { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: var(--orange-soft); color: var(--orange-deep); font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 13px; }
@@ -105,7 +146,6 @@
 .hk-lang { color: rgba(255,255,255,0.6); font-family: 'IBM Plex Mono', monospace; font-size: 12px; text-decoration: none; }
 .hk-lang:hover { color: #fff; }
 .hk-header .hk-btn { padding: 10px 20px; font-size: 13px; color: #fff; }
-html { scroll-padding-top: 72px; }
 @media (min-width: 820px) { .hk-nav { display: flex; } }
 
 /* ---- Apply now: left side drawer with contact form ---- */
